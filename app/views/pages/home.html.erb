@@ -1,6 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<% @post.each do |post| %>
+<h1>Blog Posts</h1>
+<% @posts.each do |post| %>
     <h2><%= post.title %></h2>
+<% end %>
+<hr>
+<h1>Skills</h1>
+<% @skills.each do |skill| %>
+    <h3><%= skill.title %></h3>
 <% end %>
