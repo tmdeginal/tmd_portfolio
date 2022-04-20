@@ -1,7 +1,8 @@
-<h1>My Portfolios</h1>
-<% @portfolio_items.each do |p| %>
-    <h2><%= link_to p.title, portfolio_path(p.id) %></h2>
-    <h3><%= p.subtitle %></h3>
-    <p><%= p.body %></p>
-    <%= image_tag p.thumb_image %>
+<h1>Portfolio Items</h1>
+<%= link_to "+ Portfolio", new_portfolio_path %>
+<% @portfolio_items.each do |portfolio_item| %>
+	<h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h2>
+	<h4><%= portfolio_item.subtitle %></h4>
+	<p><%= portfolio_item.body %></p>
+	<%= image_tag portfolio_item.thumb_image %>
 <% end %>
